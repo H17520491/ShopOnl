@@ -28,6 +28,9 @@ namespace shopOnl.Data.EF
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
             modelBuilder.ApplyConfiguration(new CartConfiguration());
+
+            //Data seeding
+           
             //base.OnModelCreating(modelBuilder);
         }
 
