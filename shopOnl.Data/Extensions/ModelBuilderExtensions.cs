@@ -49,7 +49,7 @@ namespace shopOnl.Data.Extensions
            new Product()
            {
                Id = 1,
-               DataCreated = DateTime.Now,
+               DateCreated = DateTime.Now,
                OriginalPrice = 100000,
                Price = 200000,
                Stock = 0,
