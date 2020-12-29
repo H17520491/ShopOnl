@@ -11,6 +11,8 @@
     <Compile Remove="Migrations\20201224070854_AspnetCoreIdentityDatabase.Designer.cs" />
     <Compile Remove="Migrations\20201224071237_AspnetCoreIdentityDatabase.cs" />
     <Compile Remove="Migrations\20201224071237_AspnetCoreIdentityDatabase.Designer.cs" />
+    <Compile Remove="Migrations\20201224073145_AspnetCoreIdentityDatabase.cs" />
+    <Compile Remove="Migrations\20201224073145_AspnetCoreIdentityDatabase.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

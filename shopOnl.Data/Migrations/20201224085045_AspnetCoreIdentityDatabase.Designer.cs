@@ -10,7 +10,7 @@ using shopOnl.Data.EF;
 namespace shopOnl.Data.Migrations
 {
     [DbContext(typeof(shopOnlDBcontext))]
-    [Migration("20201224073145_AspnetCoreIdentityDatabase")]
+    [Migration("20201224085045_AspnetCoreIdentityDatabase")]
     partial class AspnetCoreIdentityDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -575,7 +575,7 @@ namespace shopOnl.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2020, 12, 24, 14, 31, 44, 17, DateTimeKind.Local).AddTicks(8907),
+                            DateCreated = new DateTime(2020, 12, 24, 15, 50, 45, 95, DateTimeKind.Local).AddTicks(3090),
                             OriginalPrice = 100000m,
                             Price = 200000m,
                             Stock = 0,

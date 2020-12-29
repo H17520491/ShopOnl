@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using shopOnl.Data.Entities;
 using shopOnl.Data.Enums;
 using System;
@@ -83,6 +84,38 @@ namespace shopOnl.Data.Extensions
             modelBuilder.Entity<ProductInCategory>().HasData(
                 new ProductInCategory() { ProductId = 1, CategoryId = 1 }
                 );
+            // any guid
+            var roleId = new Guid("F0C97E5E-F91E-432B-8819-A4C2D3FD2926");
+            var adminId = new Guid("2FC4A6D8-26B9-4EB9-BDC4-E8F0AF4595FF");
+            modelBuilder.Entity<AppRole>().HasData(new AppRole
+            {
+                Id = roleId,
+                Name = "admin",
+                NormalizedName = "admin",
+                Description = "Administrator role"
+            });
+
+            var hasher = new PasswordHasher<AppUser>();
+            modelBuilder.Entity<AppUser>().HasData(new AppUser
+            {
+                Id = adminId,
+                UserName = "admin",
+                NormalizedUserName = "admin",
+                Email = "truchoale29@gmail.com",
+                NormalizedEmail = "truchoale29@gmail.com",
+                EmailConfirmed = true,
+                PasswordHash = hasher.HashPassword(null, "Hoa123456"),
+                SecurityStamp = string.Empty,
+                FirstName = "Hoa",
+                LastName = "le",
+                Dob = new DateTime(2020, 12, 29)
+            });
+
+            modelBuilder.Entity<IdentityUserRole<Guid>>().HasData(new IdentityUserRole<Guid>
+            {
+                RoleId = roleId,
+                UserId = adminId
+            });
         }
     }
 }

@@ -165,7 +165,7 @@ namespace shopOnl.Data.Migrations
             migrationBuilder.InsertData(
                 table: "Products",
                 columns: new[] { "Id", "DateCreated", "OriginalPrice", "Price" },
-                values: new object[] { 1, new DateTime(2020, 12, 24, 14, 31, 44, 17, DateTimeKind.Local).AddTicks(8907), 100000m, 200000m });
+                values: new object[] { 1, new DateTime(2020, 12, 24, 15, 50, 45, 95, DateTimeKind.Local).AddTicks(3090), 100000m, 200000m });
 
             migrationBuilder.InsertData(
                 table: "CategoryTranslations",
