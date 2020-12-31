@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shopOnl.WebApp", "shopOnl.WebApp\shopOnl.WebApp.csproj", "{58DD04CA-A93E-4CD6-9D05-54FAF2ACC6AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "shopOnl.WebApp", "shopOnl.WebApp\shopOnl.WebApp.csproj", "{58DD04CA-A93E-4CD6-9D05-54FAF2ACC6AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shopOnl.Data", "shopOnl.Data\shopOnl.Data.csproj", "{0E857D1F-7351-4EA7-A99E-0ACCF4454633}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "shopOnl.Data", "shopOnl.Data\shopOnl.Data.csproj", "{0E857D1F-7351-4EA7-A99E-0ACCF4454633}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shopOnl.Application", "shopOnl.Application\shopOnl.Application.csproj", "{0A01B88F-1148-43EB-9C33-CD9CEFA04245}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "shopOnl.Application", "shopOnl.Application\shopOnl.Application.csproj", "{0A01B88F-1148-43EB-9C33-CD9CEFA04245}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopOnl.Utilitiess", "ShopOnl.Utilitiess\ShopOnl.Utilitiess.csproj", "{94CA0971-ADFB-4237-BDE5-3CE8D65E99F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{0A01B88F-1148-43EB-9C33-CD9CEFA04245}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A01B88F-1148-43EB-9C33-CD9CEFA04245}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A01B88F-1148-43EB-9C33-CD9CEFA04245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94CA0971-ADFB-4237-BDE5-3CE8D65E99F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94CA0971-ADFB-4237-BDE5-3CE8D65E99F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94CA0971-ADFB-4237-BDE5-3CE8D65E99F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94CA0971-ADFB-4237-BDE5-3CE8D65E99F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

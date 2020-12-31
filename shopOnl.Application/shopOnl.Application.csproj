@@ -4,4 +4,13 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Catalog\Products\k15pkpxz.pyj~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\shopOnl.Data\shopOnl.Data.csproj" />
+    <ProjectReference Include="..\ShopOnl.Utilitiess\ShopOnl.Utilitiess.csproj" />
+  </ItemGroup>
+
 </Project>
