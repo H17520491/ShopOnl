@@ -1,9 +1,6 @@
 ﻿using shopOnl.Application.Catalog.Products.Dtos;
 using shopOnl.Application.Catalog.Products.Dtos.Manage;
 using shopOnl.Application.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace shopOnl.Application.Catalog.Products
@@ -20,7 +17,7 @@ namespace shopOnl.Application.Catalog.Products
         Task<bool> UpdateStock(int productId, int addedQuantity);
 
         Task AddViewcount(int productId);
-        Task<List<ProductViewModel>> GetAll();
+        
         Task<PageResulf<ProductViewModel>> GetAllPaging(GetProductPagingRequest request);
     }
 }
