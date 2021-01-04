@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace shopOnl.Application.Dtos
+namespace shopOnl.ViewModels.Common
 {
     public class PageResulf<T>
     {

@@ -1,16 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+
   <ItemGroup>
-    <None Remove="Catalog\Products\k15pkpxz.pyj~" />
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\shopOnl.Data\shopOnl.Data.csproj" />
     <ProjectReference Include="..\ShopOnl.Utilitiess\ShopOnl.Utilitiess.csproj" />
+    <ProjectReference Include="..\shopOnl.ViewModels\shopOnl.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

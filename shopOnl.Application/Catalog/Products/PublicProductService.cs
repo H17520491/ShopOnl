@@ -1,6 +1,4 @@
-﻿using shopOnl.Application.Catalog.Products.Dtos;
-using shopOnl.Application.Catalog.Products.Dtos.Public;
-using shopOnl.Application.Dtos;
+﻿
 using shopOnl.Data.EF;
 using System;
 using System.Collections.Generic;
@@ -8,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using shopOnl.ViewModels.Common;
+using shopOnl.ViewModels.Catalog.Products;
+using shopOnl.ViewModels.Catalog.Products.Public;
 
 namespace shopOnl.Application.Catalog.Products
 {

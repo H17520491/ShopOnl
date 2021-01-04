@@ -62,6 +62,7 @@ namespace shopOnl.Data.EF
         public DbSet<AppConfig> AppConfigs { get; set; }
         public DbSet<Slide> Slides { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
+      
 
     }
 }

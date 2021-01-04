@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace shopOnl.Application.Catalog.Products.Dtos.Manage
+namespace shopOnl.ViewModels.Catalog.Products.Manage
 {
     public class ProductCreateRequest
     {
@@ -19,6 +20,7 @@ namespace shopOnl.Application.Catalog.Products.Dtos.Manage
         public string SeoAlias { get; set; }
         public string LanguageId { set; get; }
 
+        public IFormFile ThumbnailImage { get; set; }
 
     }
 }

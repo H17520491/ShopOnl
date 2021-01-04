@@ -1,6 +1,6 @@
-﻿using shopOnl.Application.Catalog.Products.Dtos;
-using shopOnl.Application.Catalog.Products.Dtos.Public;
-using shopOnl.Application.Dtos;
+﻿using shopOnl.ViewModels.Catalog.Products;
+using shopOnl.ViewModels.Catalog.Products.Public;
+using shopOnl.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
