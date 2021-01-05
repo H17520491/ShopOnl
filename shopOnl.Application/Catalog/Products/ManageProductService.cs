@@ -4,7 +4,7 @@ using shopOnl.Application.Common;
 using shopOnl.Data.EF;
 using shopOnl.Data.Entities;
 using shopOnl.ViewModels.Catalog.Products;
-using shopOnl.ViewModels.Catalog.Products.Manage;
+
 using shopOnl.ViewModels.Common;
 using ShopOnl.Utilitiess.Exceptions;
 using System;
@@ -101,7 +101,7 @@ namespace shopOnl.Application.Catalog.Products
         }
 
 
-        public async Task<PageResulf<ProductViewModel>> GetAllPaging(GetProductPagingRequest request)
+        public async Task<PageResulf<ProductViewModel>> GetAllPaging(GetManageProductPagingRequest request)
         {
             //Select
             var query = from p in _context.Products

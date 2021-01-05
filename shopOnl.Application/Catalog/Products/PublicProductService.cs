@@ -8,7 +8,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using shopOnl.ViewModels.Common;
 using shopOnl.ViewModels.Catalog.Products;
-using shopOnl.ViewModels.Catalog.Products.Public;
+
 
 namespace shopOnl.Application.Catalog.Products
 {
@@ -19,7 +19,34 @@ namespace shopOnl.Application.Catalog.Products
         {
             _context = context;
         }
-        public async Task<PageResulf<ProductViewModel>> GetAllByCategoryId(GetProductPagingRequest request)
+
+        public async Task<List<ProductViewModel>> GetAll()
+        {
+            var query = from p in _context.Products
+                        join pt in _context.ProductTranslations on p.Id equals pt.ProductId
+                        join pic in _context.ProductInCategories on p.Id equals pic.ProductId
+                        join c in _context.Categories on pic.CategoryId equals c.Id
+                        select new { p, pt, pic };
+            var data = await query.Select(x => new ProductViewModel()
+               {
+                   Id = x.p.Id,
+                   Name = x.pt.Name,
+                   DateCreated = x.p.DateCreated,
+                   Description = x.pt.Description,
+                   Details = x.pt.Details,
+                   LanguageId = x.pt.LanguageId,
+                   OriginalPrice = x.p.OriginalPrice,
+                   Price = x.p.Price,
+                   SeoAlias = x.pt.SeoAlias,
+                   SeoTitle = x.pt.SeoTitle,
+                   SeoDescription = x.pt.SeoDescription,
+                   Stock = x.p.Stock,
+                   ViewCount = x.p.ViewCount,
+               }).ToListAsync();
+            return data;
+        }
+
+        public async Task<PageResulf<ProductViewModel>> GetAllByCategoryId(GetPublicProductPagingRequest request)
         {
             var query = from p in _context.Products
                         join pt in _context.ProductTranslations on p.Id equals pt.ProductId

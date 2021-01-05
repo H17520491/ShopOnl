@@ -1,5 +1,4 @@
 ﻿using shopOnl.ViewModels.Catalog.Products;
-using shopOnl.ViewModels.Catalog.Products.Public;
 using shopOnl.ViewModels.Common;
 using System;
 using System.Collections.Generic;
@@ -10,6 +9,9 @@ namespace shopOnl.Application.Catalog.Products
 {
     public interface IPublicProductService
     {
-       Task<PageResulf<ProductViewModel>> GetAllByCategoryId(GetProductPagingRequest request);
+        Task<PageResulf<ProductViewModel>> GetAllByCategoryId(GetPublicProductPagingRequest request);
+
+        Task<List<ProductViewModel>> GetAll();
+
     }
 }

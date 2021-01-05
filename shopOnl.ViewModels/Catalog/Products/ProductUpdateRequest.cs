@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace shopOnl.ViewModels.Catalog.Products.Manage
+namespace shopOnl.ViewModels.Catalog.Products
 {
     public class ProductUpdateRequest
     {

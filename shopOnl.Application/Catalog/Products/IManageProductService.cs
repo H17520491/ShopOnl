@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using shopOnl.ViewModels.Catalog.Products;
-using shopOnl.ViewModels.Catalog.Products.Manage;
 using shopOnl.ViewModels.Common;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -20,7 +19,7 @@ namespace shopOnl.Application.Catalog.Products
 
         Task AddViewcount(int productId);
         
-        Task<PageResulf<ProductViewModel>> GetAllPaging(GetProductPagingRequest request);
+        Task<PageResulf<ProductViewModel>> GetAllPaging(GetManageProductPagingRequest request);
 
         Task<int> AddImages(int productId, List<IFormFile> files);
         Task<int> RemoveImages(int imageId);
