@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\shopOnl.Application\shopOnl.Application.csproj" />
     <ProjectReference Include="..\shopOnl.Data\shopOnl.Data.csproj" />
     <ProjectReference Include="..\ShopOnl.Utilitiess\ShopOnl.Utilitiess.csproj" />
