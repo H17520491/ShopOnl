@@ -11,7 +11,7 @@ namespace shopOnl.Application.Catalog.Products
     {
         Task<PageResulf<ProductViewModel>> GetAllByCategoryId(GetPublicProductPagingRequest request);
 
-        Task<List<ProductViewModel>> GetAll();
+        Task<List<ProductViewModel>> GetAll(string languageId);
 
     }
 }
