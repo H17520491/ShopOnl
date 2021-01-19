@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using shopOnl.ViewModels.Catalog.ProductImages;
 using shopOnl.ViewModels.Catalog.Products;
 using shopOnl.ViewModels.Common;
 using System.Collections.Generic;
@@ -23,11 +24,13 @@ namespace shopOnl.Application.Catalog.Products
         
         Task<PageResulf<ProductViewModel>> GetAllPaging(GetManageProductPagingRequest request);
 
-        Task<int> AddImages(int productId, List<IFormFile> files);
-        Task<int> RemoveImages(int imageId);
-        Task<int> UpdateImage(int imageId, string Caption, bool isDefault);
+        Task<int> AddImage(int productId, ProductImageCreateRequest request);
+        Task<int> RemoveImage( int imageId);
+        Task<int> UpdateImage( int imageId, ProductImageUpdateRequest request);
 
-        Task<List<ProductImageViewModel>> GetListImage(int productId);
+        Task<ProductImageViewModel> GetImageById(int imageId);
+
+        Task<List<ProductImageViewModel>> GetListImages(int productId);
         
     }
 }

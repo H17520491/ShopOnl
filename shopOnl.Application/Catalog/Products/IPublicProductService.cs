@@ -9,9 +9,8 @@ namespace shopOnl.Application.Catalog.Products
 {
     public interface IPublicProductService
     {
-        Task<PageResulf<ProductViewModel>> GetAllByCategoryId(GetPublicProductPagingRequest request);
+        Task<PageResulf<ProductViewModel>> GetAllByCategoryId(string languageId, GetPublicProductPagingRequest request);
 
-        Task<List<ProductViewModel>> GetAll(string languageId);
-
+       
     }
 }
