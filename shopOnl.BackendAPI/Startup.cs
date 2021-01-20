@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,7 +9,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using shopOnl.Application.Catalog.Products;
 using shopOnl.Application.Common;
+using shopOnl.Application.System.Users;
 using shopOnl.Data.EF;
+using shopOnl.Data.Entities;
 using ShopOnl.Utilitiess.Constants;
 using System;
 using System.Collections.Generic;
@@ -31,11 +34,20 @@ namespace shopOnl.BackendAPI
         {
             services.AddDbContext<shopOnlDBcontext>(options =>
               options.UseSqlServer(Configuration.GetConnectionString(SystemConstants.MainConnectionString)));
+
+            services.AddIdentity<AppUser, AppRole>()
+                .AddEntityFrameworkStores<shopOnlDBcontext>()
+                .AddDefaultTokenProviders();
             //Declare DI
 
             services.AddTransient<IStorageService, FileStorageService>();
             services.AddTransient<IPublicProductService, PublicProductService>();
             services.AddTransient<IManageProductService, ManageProductService>();
+            services.AddTransient<UserManager<AppUser>, UserManager<AppUser>>();
+            services.AddTransient<SignInManager<AppUser>, SignInManager<AppUser>>();
+            services.AddTransient<RoleManager<AppRole>, RoleManager<AppRole>>();
+            services.AddTransient<IUserService, UserService>();
+
 
             services.AddControllersWithViews();
 
