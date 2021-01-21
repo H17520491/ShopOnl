@@ -34,7 +34,7 @@ namespace shopOnl.BackendAPI.Controllers
             {
                 return BadRequest("UseName or password is incorrect.");
             }
-            return Ok(new {token = resultToken });
+            return Ok( resultToken );
         }
 
 
